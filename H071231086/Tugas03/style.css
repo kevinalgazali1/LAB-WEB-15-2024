@@ -1,0 +1,247 @@
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+.navbar-brand {
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    transition: color 0.3s; 
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s; 
+}
+.nav-link:hover,
+.nav-link.active {
+    color: #000000;
+}
+
+@media (max-width: 900px) {
+    
+    .nav-link {
+        color: rgb(95, 94, 94);
+    }
+    .nav-link:hover,
+    .nav-link.active {
+        color: #000000;
+    }
+}
+
+@media (min-width: 901px) {
+    .custom-nav-link::before {
+        background-color: rgb(255, 255, 255);
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 2px;
+        visibility: hidden;
+        transition: width 0.3s ease-in-out, visibility 0.3s ease-in-out; 
+    }
+
+    .custom-nav-link:hover::before,
+    .custom-nav-link.active::before {
+        width: 100%;    
+        visibility: visible;
+    }
+}
+
+.gallery-section img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+
+.hero-section {
+    background-image: linear-gradient(
+        to top,
+        rgb(0, 0, 0),
+        rgba(0, 0, 0, 0.4) 15%
+      ),
+      url(images/JAN_4312-Pano.jpg);
+      background-size: cover;
+      background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    
+}
+
+.hero-section::before {
+    background-color: rgba(0, 0, 0, 0.5); 
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hero-section .container {
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+    padding-top: 200px;
+}
+
+
+.hero-section h1  {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    font-family: poppins, sans-serif;
+    font-size: 1.5em;
+    
+}
+/* Menonaktifkan hover untuk elemen Home, About, dan Work */
+.nav-link.custom-nav-link[href="#"], 
+.nav-link.custom-nav-link[href="#about"], 
+.nav-link.custom-nav-link[href="#work"] {
+    pointer-events: none; /* Menghilangkan efek hover */
+    color: rgb(255, 255, 255); /* Menetapkan warna tetap */
+}
+
+.nav-link.custom-nav-link[href="#"]:hover, 
+.nav-link.custom-nav-link[href="#about"]:hover, 
+.nav-link.custom-nav-link[href="#work"]:hover {
+    color: rgb(255, 255, 255); /* Tidak ada perubahan saat di-hover */
+    text-decoration: none; /* Menghilangkan underline atau efek lainnya */
+}
+
+
+.hero-section p  {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    font-family: poppins, sans-serif;
+    font-size: 0.5em;
+}
+
+.hero-section a{
+    margin-top: 10px ;
+}
+
+.about-section {
+    margin: 0;
+    padding: 20px;
+    background-color: #000000; 
+    color: white;
+}
+.container-about {
+    max-width: 600px; 
+    margin: 0; 
+    text-align: left; 
+}
+.about-section h2 {
+    margin-left: 40px;
+    font-size: 2em; 
+    margin-bottom: 10px; 
+}
+
+.about-section p {
+    margin-left: 40px;
+    font-size: 1.2em; 
+    line-height: 1.5; 
+}
+
+.gallery-section{
+    margin: 0px;
+    padding: 30px;
+    background-color: #000000;
+}
+
+.gallery-section h2 {
+    text-align: left;
+    font-size: 2em; /* Ukuran font untuk judul */
+    padding: 20px;
+    margin: 0;
+    margin-bottom: 10px; /* Jarak bawah judul */
+    color: white;
+}
+.contact-section {
+    background-color: #000000;
+}
+
+.contact-section .form-control {
+    background-color: #2c2c2c;
+    color: white;
+    border: none;
+}
+
+.contact-section .form-control::placeholder {
+    color: #cccccc;
+}
+
+.contact-section .form-label {
+    color: white;
+}
+
+.contact-section .btn-primary {
+    background-color: #1d1d1d;
+    border-color: #1d1d1d;
+}
+
+.contact-section .btn-primary:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
+.footer {
+    background-color: #1d1d1d;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer h5 {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.footer p, 
+.footer li {
+    font-size: 0.9em;
+    color: #b5b5b5;
+}
+
+.footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer .btn-floating {
+    font-size: 1.2em;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .btn-outline-light {
+    border: 1px solid #ffffff;
+}
+
+.footer .btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #1d1d1d;
+}
