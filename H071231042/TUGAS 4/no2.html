@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function hitungDiskon() {
+            let hargaBarang = prompt("Masukkan Harga Barang: ");
+            let jenisBarang = prompt("Masukkan Jenis Barang: ");
+            if (jenisBarang == "Elektronik") {
+                diskon = 10;    
+            } else if (jenisBarang == "Pakaian") {
+                diskon = 20;
+            } else if (jenisBarang == "Makanan") {
+                diskon = 5;
+            } else if (jenisBarang == "Minuman") {
+                diskon = 50;
+            } else {
+                diskon = 0;
+            }
+        
+            hargaDiskon = hargaBarang - (hargaBarang * diskon / 100);
+            console.log("Harga Awal : " + hargaBarang);
+            console.log("Diskon : " + diskon + "%");
+            console.log("Harga Setelah Diskon : " + hargaDiskon);
+            
+        }
+        hitungDiskon();
+    </script>
+</body>
+</html>
