@@ -1,0 +1,240 @@
+body {
+    font-family: Arial, sans-serif; /* Menentukan jenis font untuk seluruh halaman */
+    margin-left: 30px; /* Menghilangkan margin default pada elemen body */
+    padding: 0; /* Menghilangkan padding default pada elemen body */
+    box-sizing: border-box; /* Memastikan padding dan border dimasukkan dalam ukuran elemen */
+}
+.navbar {
+    background-color: red; /* Warna latar belakang navbar */
+    padding: 5px 20px; /* Menambahkan jarak dalam elemen navbar */
+    position: fixed; /* Navbar tetap di tempat meskipun halaman di-scroll */
+    width: 100%; /* Navbar memenuhi lebar penuh halaman */
+    height: 60px; /* Tinggi navbar */
+    display: flex; /* Menjadikan elemen di dalamnya menggunakan Flexbox */
+    justify-content: center; /* Mengatur elemen di dalam navbar di tengah secara horizontal */
+    align-items: center; /* Mengatur elemen di tengah secara vertikal */
+    top: 0; /* Navbar berada di bagian atas halaman */
+    left: 0; /* Mengatur posisi kiri navbar */
+    z-index: 1000; /* Menentukan urutan layering agar navbar selalu berada di atas */
+}
+.logo-header {
+    display: flex;
+    align-items: left; /* Mengatur konten logo di sebelah kiri */
+    height: 100%; /* Tinggi elemen sesuai dengan tinggi container */
+    max-width: 70px; /* Lebar maksimum logo */
+    margin-left: 30px; /* Memberi jarak dari kiri */
+}
+.content-image img {
+    width: 100%; /* Gambar memenuhi lebar kontainer */
+    height: auto; /* Menjaga proporsi gambar */
+    max-width: 100%; /* Membatasi agar gambar tidak melebihi lebar kontainer */
+    object-fit: cover; /* Menutupi seluruh kontainer tanpa memotong gambar */
+}
+.nav-item {
+    display: inline-block; /* Menampilkan elemen secara horizontal */
+    margin: 0 15px; /* Memberi jarak antar menu */
+}
+.nav-item a {
+    color: white; /* Warna teks menu */
+    cursor: pointer; /* Mengubah kursor menjadi pointer */
+    text-decoration: none; /* Menghilangkan garis bawah default pada link */
+    font-size: 1.2rem; /* Ukuran font untuk menu */
+    padding: 0.5rem 1rem; /* Menambahkan padding pada link */
+    position: relative; /* Menyiapkan elemen untuk garis bawah pada hover */
+    transition: color 0.3s ease; /* Animasi perubahan warna saat hover */
+}
+/* .nav-item a:hover {
+    color: #ffcccc; Warna teks saat di-hover */
+/* } */
+.nav-item a::after {
+    /* content: ''; */
+     /* Menambahkan konten kosong untuk membuat garis bawah */
+    position: absolute; 
+    width: 0; /* Lebar garis 0 (tidak terlihat) secara default */
+    height: 2px; /* Tinggi garis bawah */
+    background: white; /* Warna garis bawah */
+    transition: width 0.3s ease; /* Animasi lebar garis saat hover */
+    /* bottom: 0;
+    left: 0; */
+    width: 100%; /* Garis bawah muncul sepanjang teks saat hover */
+}
+/* .nav-item a:hover::after {
+} */
+.nav-item:hover {
+    background-color: rgba(139, 0, 0, 0.703); /* Latar belakang saat di-hover */
+    color: rgb(255, 255, 255); /* Warna teks saat di-hover */
+    border-radius: 0px; /* Membuat sudut elemen menjadi melengkung */
+}
+.header {
+    display: flex;
+    justify-content: space-between; /* Membagi ruang secara proporsional antara elemen */
+    align-items: center; /* Elemen diatur di tengah secara vertikal */
+    padding: 20px; /* Memberikan jarak dalam elemen header */
+    background-color: #f4f4f4; /* Warna latar belakang header */
+    margin-top: 60px; /* Memberikan jarak dari atas halaman */
+}
+.content {
+    max-width: 45%; /* Lebar maksimal konten 45% dari layar */
+}
+.text-content h1 {
+    font-size: 70px; /* Ukuran font besar untuk heading */
+    margin-left: 60px; /* Memberi jarak dari kiri */
+}
+.text-content h2 {
+    font-size: 30px; /* Ukuran font lebih kecil untuk sub-heading */
+    margin-left: 60px;
+}
+.text-content p {
+    font-size: 30px; /* Ukuran font untuk paragraf */
+    margin-left: 60px;
+}
+.about {
+    padding: 50px; /* Menambahkan padding ke seluruh bagian about */
+    background-color: #fff; /* Warna latar belakang putih */
+}
+.about h2 {
+    font-size: 2.5em; /* Ukuran font besar untuk judul section */
+    margin-left: 30px;
+}
+.column {
+    width: 48%; /* Lebar kolom hampir setengah dari kontainer */
+    line-height: 1.6; /* Spasi antar baris teks */
+}
+
+.about p {
+    line-height: 1.6; 
+    margin-left: 30px;
+    /* column-count: 2; Membagi teks menjadi dua kolom */
+    column-gap: 20px; /* Menambahkan jarak antar kolom */
+    text-align: justify; /* Teks diratakan ke kanan dan kiri */
+}
+.gallery {
+    padding: 50px;
+    background-color: #fffdfd; /* Warna latar belakang galeri */
+}
+.gallery h2 {
+    font-size: 2.5em; /* Ukuran font besar untuk judul galeri */
+    margin-left: 30px;
+    color: rgb(0, 0, 0); /* Warna teks hitam */
+}
+.gallery-container {
+    display: grid; /* Menggunakan grid layout untuk galeri */
+    grid-template-columns: repeat(3, 1fr); /* Membagi konten menjadi 3 kolom */
+    gap: 10px; /* Memberikan jarak antar elemen grid */
+    margin-left: 30px;
+}
+.gallery-item {
+    position: relative;
+    overflow: hidden; /* Memastikan gambar tetap di dalam kontainer */
+}
+.gallery-item img {
+    height: 250px; /* Tinggi gambar diatur */
+    width: 100%; /* Lebar gambar penuh sesuai dengan kolom grid */
+    object-fit: cover; /* Gambar tetap proporsional */
+    transition: transform 0.3s ease; /* Animasi transformasi gambar saat hover */
+}
+.gallery-item img:hover {
+    transform: scale(1.05); /* Gambar sedikit membesar saat di-hover */
+}
+.footer {
+    display: flex;
+    flex-direction: row; /* Mengatur elemen footer dalam baris */
+    justify-content: space-between; /* Menyebar elemen footer secara merata */
+    align-items: center; /* Elemen diatur di tengah secara vertikal */
+    padding: 1rem;
+    background-color: #232323; /* Warna latar belakang footer */
+    color: white; /* Warna teks putih */
+}
+.footer-left {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+.footer-left img {
+    height: 100%;
+    max-width: 70px; /* Ukuran maksimum logo di footer */
+    margin-right: 1rem; /* Jarak antara logo dan teks */
+}
+.footer-left strong {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Font untuk teks di footer */
+    margin-top: 10px;
+    margin-left: 1rem;
+    font-size: 20px;
+}
+.footer-right {
+    margin-right: 30px;
+}
+footer p {
+    margin: 1px 0; /* Mengatur jarak atas dan bawah untuk paragraf */
+    padding: 5px 0; /* Jarak dalam elemen paragraf */
+    font-size: 15px;
+}
+.footer-right .contact-item {
+    margin: 0.5rem 0; /* Jarak antar elemen kontak */
+}
+
+/* Responsive Design */
+@media (max-width: 850px) {
+    .footer {
+        flex-direction: column; /* Mengatur elemen footer vertikal di layar kecil */
+        padding: 1.5rem;
+        text-align: center;
+    }
+    .content-image {
+        order: -1; /* Mengatur urutan elemen gambar */
+        text-align: left;
+        height: auto;
+    }
+    .footer-left,
+    .footer-right {
+        flex-direction: column; /* Elemen diatur vertikal pada layar kecil */
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px; /* Jarak antar bagian footer */
+    }
+    .footer-right {
+        align-items: center;
+        text-align: center;
+    }
+    .footer-left strong {
+        font-size: 1.2em; /* Ukuran font lebih kecil di layar kecil */
+    }
+    .footer-left img {
+        margin-bottom: 10px;
+    }
+    .header {
+        flex-direction: column;
+        text-align: left;
+    }
+    .about p {
+        column-count: 1; /* Hanya satu kolom di layar kecil */
+        margin-left: 0; /* Menghilangkan margin kiri */
+    }
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr); /* Dua kolom di layar sedang */
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        margin-top: 200px;
+        flex-direction: column; /* Elemen footer vertikal di layar kecil */
+    }
+    .footer-left, .footer-right {
+        flex-direction: column; /* Setengah lebar untuk setiap bagian */
+        justify-content: center;
+        margin: 10px;
+    }
+    .gallery-container {
+        grid-template-columns: 1fr; /* Satu kolom di layar sangat kecil */
+    }
+    .header h1 {
+        font-size: 40px; /* Ukuran font lebih kecil di layar kecil */
+    }
+    .header h2 {
+        font-size: 20px;
+    }
+    .header p {
+        font-size: 16px;
+    }
+}

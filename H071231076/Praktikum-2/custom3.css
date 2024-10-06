@@ -1,0 +1,377 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    background-color: red;
+    padding: 5px 20px;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    margin: 0 auto;
+    left: 0;
+    z-index: 1000; /* Pastikan navbar tetap terlihat saat di-scroll */
+}
+.logo-header{
+    display: flex;
+      align-items: left;
+      height: 100%;
+      max-width: 70px;
+      /* Atur ukuran logo */
+      margin-left: 30px;
+}
+.content-image img {
+    width: 100%; /* Pastikan gambar memenuhi lebar kontainer */
+    height: auto; /* Membuat gambar tetap proporsional */
+    max-width: 100%; /* Batasi agar gambar tidak melebihi lebar kontainer */
+    object-fit: cover; /* Menutupi area kontainer tanpa memotong gambar */
+}
+
+.nav-item {
+    display: inline-block;
+    margin: 0px 15px; /* Memberi jarak antar menu */
+}
+
+.nav-item a {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    position: relative; /* Untuk garis bawah pada hover */
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #ffcccc; /* Warna sedikit lebih terang saat di-hover */
+}
+
+/* Garis bawah pada hover */
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    background: white;
+    transition: width 0.3s ease;
+    /* bottom: 0;
+    left: 0; */
+}
+
+.nav-item a:hover::after {
+width: 100%; /* Garis bawah akan muncul di seluruh lebar teks saat hover */
+}
+.nav-item:hover {
+    background-color: rgba(139, 0, 0, 0.703);
+    color: rgb(255, 255, 255);
+    border-radius: 0px;
+}
+
+/* .navbar{
+    background-color: red;
+      padding: 20px 0;
+      position: fixed;
+      width: 100%;
+      height: 60px;
+      justify-content: center;
+      top: 0;
+}
+
+.nav-item a {
+    color: white;
+    cursor: pointer;
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 0.5rem 1rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-item:hover {
+    background-color: rgba(139, 0, 0, 0.703);
+      color: rgb(255, 255, 255);
+      border-radius: 5px;
+} */
+
+/* Hero Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20pxx;
+    background-color: #f4f4f4;
+    margin-top: 60px;
+}
+
+.content {
+    max-width: 45%;
+}
+
+
+
+.text-content h1 {
+    font-size: 70px;
+    margin-left: 60px;
+}
+
+.text-content h2 {
+    font-size: 30px;
+    margin-left: 60px;
+}
+
+.text-content p {
+    font-size: 30px;
+    margin-left: 60px;
+}
+
+/* About Section */
+.about {
+    padding: 50px;
+    background-color: #fff;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-left: 30px;
+}
+
+.column {
+    width: 48%; /* Membagi dua kolom menjadi hampir setengah lebar */
+    line-height: 1.6;
+}
+.about-container{
+    display: flex;
+    flex-direction: row;
+}
+.about p {
+    display: flex;
+    flex-direction: row;
+    line-height: 1.6;
+      margin-left: 30px;
+      /* column-count: 2; */
+      /* Membagi teks menjadi dua kolom */
+      column-gap: 20px;
+      /* Menambahkan jarak antara dua kolom (opsional) */
+      text-align: justify;
+      /* Merapikan teks agar lebih rapi */
+}
+
+
+/* Gallery Section */
+.gallery {
+    padding: 50px;
+    background-color: #fffdfd;
+    
+}
+
+.gallery h2 {
+    font-size: 2.5em;
+    margin-left: 30px;
+    color: rgb(0, 0, 0);
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    gap: 10px;
+    margin-left: 30px;
+}
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+.gallery-item img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover; /* Memastikan gambar tetap proporsional */
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background-color: #232323;
+      color: white;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    /* display: flex;
+      margin-top: 10px;
+      justify-content: space-between; */
+    
+}
+
+.footer-left img {
+    /* display: flex;
+      align-items: center;
+      height: 100%;
+      max-width: 70px; */
+      height: 100%;
+        max-width: 70px; /* Ukuran logo */
+        margin-right: 1rem;
+      /* Atur ukuran logo */
+      /* margin-left: 4rem; */
+}
+.footer-left strong {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 10px;
+    margin-left: 1rem;
+    font-size: 20px;
+  }
+  .footer-right{
+    margin-right: 30px;
+  }
+/* .footer-right {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+} */
+footer p {
+    margin: 1px 0;
+    /* Menambah jarak di atas dan bawah paragraf */
+    padding: 5px 0;
+    font-size: 15px;
+
+  }
+  .footer-right .contact-item {
+    margin: 0.5rem 0; /* Jarak antar elemen kontak */
+}
+/* .footer-right .contact-item {
+    margin-bottom: 10px;
+}
+
+.footer-right .contact-item a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+} */
+/* .footer-right .social-icons {
+    display: flex;
+}
+
+.footer-right .social-icons a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+} */
+
+/* Responsive Design */
+@media (max-width: 850px) {
+    .footer {
+        flex-direction: column; /* Semua elemen vertikal di layar kecil */
+        padding: 1.5rem;
+        text-align: center;
+    }
+    .content-image{
+        order: -1;
+        text-align: left;
+        height: auto;
+        
+    }
+    .footer-left,
+    /* .footer-right {
+        flex-direction: column; Setiap bagian mengambil 100% lebar */
+        /* justify-content: center;
+        text-align: center;
+        margin: 20px;
+    } */
+
+    .footer-left,
+    .footer-right {
+        flex-direction: column; /* Susun elemen vertikal di layar kecil */
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px; /* Memberi jarak antar bagian */
+    }
+    .footer-right {
+        align-items: center;
+        text-align: center;
+    }
+    .footer-right .contact-item {
+        margin: 0.3rem 0; /* Atur jarak antar kontak lebih kecil */
+    }
+    .footer-left strong {
+        font-size: 1.2em;
+    }
+
+    .footer-left img {
+        margin-bottom: 10px;
+    }
+    .header {
+        flex-direction: column;
+        text-align: left;
+    }
+    .about p{
+        column-count: 1; /* Hanya satu kolom di layar kecil */
+        margin-left: 0; /* Hilangkan margin kiri di layar kecil */
+    }
+    .about-container {
+        flex-direction: column; /* Susun kolom secara vertikal saat layar diperkecil */
+    }
+    .column {
+        width: 100%; /* Masing-masing kolom mengambil 100% lebar saat di layar kecil */
+        margin-bottom: 20px;
+    }
+    .content {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+    .footer {
+        margin-top: 200px;
+        flex-direction: column; /* Atur horizontal pada layar besar */
+    }
+    .footer-left, .footer-right {
+        flex-direction: column; /* Setengah lebar untuk setiap bagian */
+        justify-content: center;
+        margin: 10px;
+    }
+
+    .footer-right .contact-item {
+        flex-basis: auto; 
+    }
+    
+ .gallery-container {
+        grid-template-columns: 1fr;
+    } 
+
+    .header h1 {
+        font-size: 40px;
+    }
+
+    .header h2 {
+        font-size: 20px;
+    }
+
+    .header p {
+        font-size: 16px;
+    }
+    }
