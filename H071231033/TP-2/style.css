@@ -1,0 +1,310 @@
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Times, serif;
+}
+
+a {
+    font-family: Times, serif;
+    color:beige;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    position: fixed;
+    background-color: rgb(199, 102, 237);
+    width: 100%;
+    height: 60px;
+    justify-content: center;
+    top: 0px;
+    z-index: 1;
+}
+
+.nav-item {
+    text-decoration: none;
+    padding: 20px;
+    margin-top: 1px;
+}
+
+.nav-item:hover{
+    background-color: rgb(226, 128, 241);
+    border-radius: 10px;
+}
+
+.fill {
+    display: flex;
+    background-color:rgb(244, 206, 239);
+}
+
+.gambar img {
+    height: 500px;
+    width: 450px;
+    margin-top: 110px;
+    margin-left: 100px;
+    margin-bottom: -4px;
+}
+
+.intro {
+    margin-top: 250px;
+    margin-left: 100px
+}
+
+.intro h1 {
+    font-size: 50px;
+}
+
+.intro p{
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.about {
+    display: flex;
+    font-size: 15px;
+}
+
+.about-item {
+    margin-left: 100px;
+    margin-top: 95px;
+    text-align: justify;
+}
+
+.about-item2 {
+    margin-left: 20px;
+    margin-top: 121px;
+    margin-right: 100px;
+    text-align: justify;
+}
+
+.about-item h2 {
+    font-size: 23px;
+}
+
+.container {
+    background-color: rgb(235, 239, 239);
+    padding-top: 30px;
+    margin-top: 70px;
+    margin-bottom: -150px;
+}
+
+.gallery {
+    padding: 100px 20px;
+    background-color: rgb(149, 4, 4);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border-radius: 10px;
+    margin-left: 150px;
+    margin-right: 90px;
+    margin-top: 0px;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    width: 335px;
+    height: 275px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 2px;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.item img:hover {
+    transform: scale(1.1);
+}
+
+#H2 {
+    margin-left: 160px;
+    margin-top: 100px;
+    font-size: 35px;
+}
+
+footer {
+    display: flex;
+    background-color: rgb(234, 69, 234);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 40px 0;
+    width: 100%;
+    margin: 0;
+}
+
+footer img {
+    height: 80px;
+    width: 80px;
+}
+
+footer a {
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* .company {
+    display: flex;
+    font-size: 18px;
+    font-family: sans-serif;
+    margin-left: 150px;
+} */
+
+.social-icons {
+    margin-left: 500px;
+    margin-top: 0px;
+    display: flex;
+    font-size: 20px;
+}
+/* 
+.company {
+    display: flex;
+    font-size: 18px;
+    font-family: Times, serif;
+    margin-left: 150px;
+}  */
+
+.company img {
+    width: 50px;
+    height: 10px;
+}
+
+#contact {
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        height: auto;
+    }
+
+    .fill{
+        flex-direction: column;
+    }
+
+    .gambar {
+        order: 1;
+        margin-left: 20px;
+        margin-top: 0px;
+        margin-right: 10px;
+    }
+
+    .intro {
+        order: 2;
+        margin-left: 20px;
+        margin-top: 20px;
+        text-align: left;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-item2 {
+        margin-top: -10px;
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); 
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+
+    #hadua {
+        margin-top: -10px;
+        margin-left: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        margin-top: 170px;
+    }
+
+    .social-icons, company {
+        margin-left: 0;
+        margin-right: 10px;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+        margin-right: 100px;
+    }
+
+    footer {
+        flex-direction: column;
+        margin-top: 170;
+    }
+
+    .social-icons, .company {
+        margin-left: 0;
+        margin-right: 10px;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    #hadua {
+        margin-top: -10px;
+        margin-left: 20px;
+    }
+
+    .navbar {
+        height: auto;
+    }
+
+    .fill {
+        flex-direction: column;
+    }
+
+    .gambar {
+        order: 1;
+        margin-left: 20px;
+        margin-top: 0px;
+        margin-right: 100px;
+    }
+
+    .intro {
+        order: 2;
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-right: 10px;
+        text-align: left;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-item {
+        justify-content: center;
+        margin-right: 10px;
+        margin-left: 20px;
+    }
+
+    .about-item2 {
+        margin-top: -10px;
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+}
