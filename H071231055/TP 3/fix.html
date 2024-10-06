@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Image/logoMiniWorld.jpg">
+    <title>Mini World CREATA</title>
+    <link rel="alternate" href="https://www.minecraft.net/en-us" hreflang="en-US">
+    <style>
+        .navbar {
+            background-color: #000000cb;
+        }
+
+        .navbar-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-right .nav-item {
+            margin-left: 1.5rem;
+        }
+
+        @keyframes popInOut {
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .container-img {
+            /* position: relative; */
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            color: white;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .hero-buttons a {
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .kedua {
+            width: 100%;
+            height: auto;
+            background-image: url('Image/back2.png');
+            border-radius: 40px;
+        }
+
+        .ketiga {
+            width: 100%;
+            height: auto;
+            background-image: url('Image/back3.png');
+            border-radius: 40px;
+        }
+
+        .container-keempat {
+            border-top: 5px solid #79c9ff;
+            border-right: 5px solid #79c9ff;
+            border-left: 5px solid #ffffff;
+            border-bottom: 5px solid #ffffff;
+        }
+
+        .keempat {
+            background-color: #000000;
+        }
+
+        .keempat h1 {
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .keempat p {
+            color: #cac0c0;
+            font-size: 20px;
+        }
+
+        .kelima {
+            background-color: #852217;
+        }
+
+        footer {
+            background-color: #232526;
+            color: white;
+            padding: 20px;
+            margin-top: -50px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 40px;
+            font-family: Microsoft YaHei;
+        }
+
+        @media (max-width: 850px) {
+
+            .nav-item {
+                position: absolute;
+            }
+
+            footer {
+                flex-direction: column;
+            }
+
+            .footer-content,
+            .logo,
+            .contact-info {
+                flex-direction: column;
+                margin: 10px;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            footer {
+                flex-direction: column;
+            }
+
+            .footer-content,
+            .logo,
+            .contact-info {
+                flex-direction: column;
+                margin: 10px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top ms-" data-bs-theme="dark" style="padding: 2.4rem; height: 98px;">
+        <div class="container-fluid">
+            <div>
+                <a class="navbar-brand" href="#"><img
+                    src="https://static.miniworldgame.com/nuxts-official-website/public/_nuxt/logo.0edc9054.png"
+                    alt="logo" data-v-9e122ea3></a>
+            </div>
+                    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse ms-sm-auto" id="navbarNavDropdown">
+                <ul class="navbar-nav w-100"
+                    style="font-family: Microsoft YaHei; font-weight: bold; font-size: 1.3rem; align-items: center; gap: 4rem; padding: 5.4rem; color: #ffffff;">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#new">NEWS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#featured">FEATURED</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="" href="#">GALERY</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-right">
+                <div class="nav-item dropdown ms-auto">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Language
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">English</a></li>
+                        <li><a class="dropdown-item" href="#">繁體中文</a></li>
+                        <li><a class="dropdown-item" href="#">ไทย</a></li>
+                        <li><a class="dropdown-item" href="#">Tiếng Việt</a></li>
+                        <li><a class="dropdown-item" href="#">Português</a></li>
+                        <li><a class="dropdown-item" href="#">Bahasa Melayu</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="nav-item"
+                    style="padding: 33px 70px 33px 70px; background: linear-gradient(60deg, #e3c139, #fbef43); font-family: Microsoft YaHei; font-weight: bold; font-size: 1.3rem; text-align: center;">
+                    <a class="nav-link" href="#" style="display: inline-block; animation: popInOut 2s infinite;">TOP
+                        UP</a>
+                </div> -->
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Image -->
+    <div class="container-img">
+        <div class="col d-flex justify-content-center">
+            <img src="Image/gambar1.jpg" alt="Background Image">
+        </div>
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="overlay"></div>
+            <div class="content">
+                <h1 class="display-4"><img src="Image/openVideo.png"
+                        style="display: inline-block; animation: popInOut 2s infinite;" alt=""></h1>
+                <div class="hero-buttons mt-4">
+                    <a href="#" class="btn btn-dark"
+                        style="font-family: Microsoft YaHei; font-weight: bold; font-size: 1.3rem; align-items: center; gap: 4rem; padding: 1.2rem; color: #ffffff;"><i
+                            class="bi bi-pc-display"></i><img class="download-icon pc-official"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAoCAYAAACB4MgqAAAAAXNSR0IArs4c6QAAAlpJREFUWEftmE2oTVEUx3//5CMM5Gug1/NVQurl86UMlDIwegNhwkDKQJIMRBl4EZkY+EhkxOQNDQxkaISX90TdJAY+wkivhxiwtLQP1+l2O3dv57mnzhrd1t1rr9/+d85Zey0BmNls4ASwHZjnvi6098AQMCjps8xsFnAfWNaFsK2QHgMbHfwKsL8i0BnmoIO/BRZUDHzUwb8BUyoG/tzBvwJTa/CJUaBWfGJ0/pOlVrxWvKAC/+RR8TrwCZiTSzoOCJiZ838A5gKTCkK2WpYM7sBrgZfADWBXyDICbA6Fze9BS4L/AnAI2ADcAyZHwieDNyStDDfMfcC1AHJR0sHg9xvdjuAfkHQr+F8DPf8L3POeB0aBM013ni/AMWAGcLJJ2Wd+LQW2AHsjoT0sWfGE3EmhNXiSfBHBteIRoiWF1IonyRcRXCseIVpSyF+Ke7VrJG1XfvAKYHq+cg5LWl9+7vgMZvYQWJcHH5G0Jn7b8iPN7BGwOg/+CjiVeE8uk/4HcBxYmIFXdiD0EfDBZ5Ws4ZOs28C2KlF7t+XgqwB/W6dVBH4M6PNm1gf7m0LbtbzL4b3T2iPpyS/wAO+/+4D5fpaCB1gEXA1r7wJn23yV/KtwGugP63cC/n4VtXeSnmaLf4MXjW5eZ2ZesB4E35CkrMtvuZ2Z3QG2hj+XSvLpQJSlgnsx8KLgdlPS7nYUuQ9BryTv9KOsI3AzO5rrzn0usjhk9gHQmzaPynegN3T+HvICcF9m5yRdL3qKTsH9GXb4MuyApMtFN+4U3Gcnh4tu3uG6I5IuFY35CUNZCezOW28oAAAAAElFTkSuQmCC"
+                            alt="icon" data-v-87f45041> Official PC</a>
+                    <a href="#" class="btn btn-dark"
+                        style="font-family: Microsoft YaHei; font-weight: bold; font-size: 1.3rem; align-items: center; gap: 4rem; padding: 1rem; color: #ffffff;"><i
+                            class="bi bi-steam"></i><img class="download-icon steam"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAvCAYAAAClgknJAAADW3RFWHRDb21tZW50ALhWsr4APHByb3BzPg0KPHByb3A+DQo8a2V5Pl9JUEdGSUQ8L2tleT4NCjx2YWw+W0RvY0lEXT1CMzREQjYyQi0wODNDLTRDMTItQjQ3OC03QTAwMjM3OERCNDA8L3ZhbD4NCjwvcHJvcD4NCjxwcm9wPg0KPGtleT5fSVBHRkxPV19QLUI2NTFfRS0wX0NWLTg4NTIwQ0VDX0NOLTMwMDM0RTg4PC9rZXk+DQo8dmFsPkRQRlBNS3wzfDUwfDF8MDwvdmFsPg0KPC9wcm9wPg0KPHByb3A+DQo8a2V5Pl9JUEdGTE9XX1AtQjY1MV9FLTFfRlAtMV9DVi1DMTY1MEEwMV9DTi0zQjI3NzQzRjwva2V5Pg0KPHZhbD52ZmtMV3pidVJlcWdmM2RpemRDVmo2VDIxdmFoMHhNeWZURTdwdW5ETWFSTTNaZWl0L040SUF3RDhKOE5vNE0wL1ZSNG9QaWxzT09SaVlReElUSXF2SGxLM1dZL1plWDh2dTgydXJ1N1dJbmoyS0ZUNDN0dDFVVVdrVHh5WDNkQkh1TWdjVSttNTZaSE9wdWF6L2t6TENIVkRiYytRZERpV2xGd3A1QW9uRXFva0oxcHZrVUpTNGkzNHJkcitkbnlJZEJSY3VhSzBXNE1QWkRTNlRpQnYxSHlwa091RlE3ak15QmtWTWhJZ3NqbzlFU0FqZzhqbktmU3dGcWxaQkdKZTVHdmZIUDJqVVZidjlrV3BrbU5pS0MzNmhmM01MeDlYQk4vT2RhQVN3RGUwRGR3eHZGYXdhVXQyVFRENm5PTmVWYm0xTHJTUkQyRGtmVklCMXk4QWZkcGRTaUkwYlFubjdYRk4zbTRKQkFPU3FmbitwTER4bWkyTnd6UC9vc3I8L3ZhbD4NCjwvcHJvcD4NCjxwcm9wPg0KPGtleT5fSVBHTEFCX1AtQjY1MV9FLTFfQ1YtRkYzRTEyNTFfQ04tQ0QxNDMyQjA8L2tleT4NCjx2YWw+NytsZVRYL05jd0hqYVUydytzc1E4bXZIZVZzcXkrcmIxd1JPUmZNT045YlNhTHNvNE1OWkEwV2cyZnYrdU5tTzwvdmFsPg0KPC9wcm9wPg0KPC9wcm9wcz4NCgAAA0Y1QDRu6KWBlwAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAMmaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA5LjEtYzAwMSA3OS5hOGQ0NzUzNDksIDIwMjMvMDMvMjMtMTM6MDU6NDUgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyNC42IChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyREQ4RTBGRDdENDcxMUVFQkVEREFFRjA1RTc2RjY3QSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyREQ4RTBGRTdENDcxMUVFQkVEREFFRjA1RTc2RjY3QSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjJERDhFMEZCN0Q0NzExRUVCRUREQUVGMDVFNzZGNjdBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjJERDhFMEZDN0Q0NzExRUVCRUREQUVGMDVFNzZGNjdBIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+iBW5DAAABDlJREFUeNrMmk1IVFEUx+fNTPmdNZpaqKHWlNbCoBaVFVmLEMsUSihtdrUptIVpEAWtDGMCIYiioESRlvaxlAhCkVqERaVmZREjYVJmSFqv/4Uzcnm8+76vduDHvI9z7zvn3Y9zz32jqKrq80BSwCawEYTBBrAOrKD7k2AYvAFD4BV4CaZdP5k54JAAKAc9qnN5QHUEnNrh1PAa8F31TiapzoBsB/aBCVWeTFCLeO7AUtChLpx00DNNbVMsDOJsMAqSfQsrv0AhGDdS8ptUshbEFsF4Hz0zRk4IxagF8sFH3/8ha8CYHQfYvP5TslEPwTt609tBiYl+qm7c0BkYfhCTNDhvgVKwROe5y0E1GBeUjZFtprNQpyTjN9uIM3cFdXSaOZAtyfhiHUNZK2SCdIEj1wR1ZRo50CfB+ArNM1YKlh91Ol2kX0evX+RAiQTjezUGbaPrf0AZCIEc0ELX2fIkyOmnCOot0XNgQIIDYc0gZXJT0GXS6f5jzXW9FcCA1oGQBOOngcIZ8pbesNEAzqeyOdy1ckH9zOb5SFwvYZ5/xGZpOk6gPKHKpAwLVt9AlLs2ItCt55cSDRIc+M0dp9HvoIVy90A1dz4l0GuIO8CiboEEB85zx7P0m2ShHMvkPnHnQYEesznFTws2r+UKeM+d/6DfsxbK7gUXufNVRotN5kCxx8bP6RjKxsI5cBqEDMpe4LpRXEoN9PPYKL/u8eyTazDLvCadIp2ofIruVQnK6EmEKSwDJ2nacyv1JtMki7RdnD6L/CPc+R6N/iGT5zVqF1E7XQS0FzZy2TC1/Fd6wxGQpNHJsPDMZlE+wLKgE6DZRt8P0f6PF5JN2ZiZNIlSSpYDt4ClYD94blLRUY+MVygGxCzqT9nZUmED7zbXfO1gPY0hp5tjbEykgQLqRmM2u+0RK7sSWlkN/tJbUijQqDR92hG2DdkLsly02C6/g0JfuCYOU247S9fzLHaTS7Q3muWyyw272RvlYXP/M2rWrQZ6LJkZ9DDm+OMVJ2uWvk65QRUn6Nyr8DhgdvL5QBVl/WV6mb9NmLRy54mgW9YmAT8bxIUFl+Mg1aEDLKDNahIUGaLwCQ2bVc7QcSa4Q+vwVpBLA8+qJIIJOm6XtCnWOJ8saZYSIvlAOa2VXWwmlXQ+JOntB0TbKhGDQldJZwuNFW1ZhbqPqnHGazlmtL2uUHcSSYB05kivlr53FYH782t0n+8zrekPS+g+fi7X1t1aLDTwvo/TO6i518rNYAckvf1Cq19ojLrSUHxLQ0CTJOMjdj8xRU0q7KaxkE87ZU0Sp8yo029kUXXx5bLbj3xti2h8m1dfKWsXwfhar75SxiUD9NDnIJnyBNRw0dx0TrUqrMIdoBLMSDB8hurebdV4N/+VCNJcP+pBVxmhpUfQiS1OUkpt5A5Ry9SBMhvdpAs8pd1ox0b8E2AA8ZAbFGoUkZMAAAAASUVORK5CYII="
+                            alt="icon" data-v-87f45041> Steam</a>
+                    <a href="#" class="btn btn-dark"
+                        style="font-family: Microsoft YaHei; font-weight: bold; font-size: 1.3rem; align-items: center; gap: 4rem; padding: 1rem; color: #ffffff;"><i
+                            class="bi bi-google-play"></i><img class="download-icon google"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAwCAYAAACFUvPfAAAAAXNSR0IArs4c6QAAB1NJREFUaEPN2n1wFOUdB/Dv8+zLXe6OYEJexqHWVmXs1CnjWKzvrYC1jgZIDASH0hH7AmPVMODgy2BnAhIcIwJNiRFjFEKQQACpjIJt0YwF06S2o1AC0eQSIWDeE5Lbu9272306e3dJ7iC52707lPsnM8mzu5/95fv8nufJhCD0uatywY1eG3seYL/QCK4iQBf14z3bBbqx7onazpFxV8JXoiPu2rbw17LNVwENKQSBbwU+DAwAucD5yXqbz1Fa99g2+YpAz9q0+Jb+a6R/8X4qTARihIFoaBUVcfmnS2re/67h5Kc1cw8CQs5YfScmaYSB0+gRqpLChsW1Td8Vntz9WoXLk7HPTjS7IUMgMoR4eT953eG3rT3yaFWfoQuTOIjMftEre9OrLe7M3SCqA2GRjvoYPTLQSDenknW2lt7yuqI6fxJdUW9FZhW7ZKiCRZnyDjyZNaCaw9SzdTzVyBe8Qp6uX7L3iKmL4xxMZhVLMqBZiCpCztgJOcNcxUc7TQBP9wsK98ynS3a3xukxdFkIzSx6g9PhypRdcGe+A6pOMhyViBZJiIfzYSPpt5Y0FO4cMqQwOSgMHezMI3BP5i4Qk1GJwDN8I/rpc/W/2Vtl0hRz+EXoMbicsQuejF2gJibnxU8LtEiVNlqG+cKjy2oaYmoMDhgHHYRDFeFL3w0pqxpUm2TwdpcO01skI2C8n1QL/cJzx56qOR/3zUIXToAegQvwpu+BJ2unqXY4HirU3y9QP9nAd5FX61fWeuLFR0GHRWXKHngyqxOKSniXIQytXtn27PEl1fvigcdAj8AFKOm1cGfvCHaVBD8S4zHH1o4i++cfne3NWHnjI+e+MHNLA+gxuDd9L6SsHaYXoHCQDs61tmFd6r+hMQpKmKqoXPm5wSlrpxV09hjBG0SHZ3wf3FlVcUVFB8+1tuOl1Eb4GRexCQbQP6RY13VKUtlNBfBGw5tAh0dlLzxZVSCGFyAGiQnIsX6Nl1MboDJuXBMlmv4yp3pdqYVTc/v+MRHcJHqs4v60dyFlbzOwAAXB+SlOrJn0WQAcaxtMqYphr+1w71DaUzcUdLRcjI8DHRaVtHfhyX47asX1SOSFMhwZiVjpZQCFLCnWLQOyUPzDvMHBkSviRIdnfD88WdvH6ePBCs+ztmN9auOEkYhG1w97gciAa+9zTX5g6rzeZn18AugxuC/tAKTstyI2WS7GY76JSESvO4OPcs6yD+6dvmrD36QE0WHtMO2vcGdXBqLiAo8FKU4UGcxwrKDoP6e8hs7B9FVTc3s3JAEdHpUD6MmqxnyhCy+mBidd8j4MsirWT/qV584koYNwD7HiPrIaa35eAr+bB4nVJky+kU/jOmz3K9ckB80Y3LyAuV9XofC/m+G/R4Yjrw3MzZk+SER7D0mzfHbV/dKtSUAzSJyAeWd2YPmJV+ASJwMyB+sdXbDntScNTjkNfW7Hn7IeGlqXGJoxSLyAnDM7sOLEK5DEyaMLB9Phd3bBnpscuCrgm/KPc368oujAYPxoHSwIyG17G4VNm+ASxsAjv2IdbrmtG478RKLCAB7dp89f/cufLOo4Hn+fDoHz2rfjyZOvQhoHnDicgVLGXD5rVVtn+uqbH+04F/+KqE86QZ9021H4v42QhNSYewmmcLDe3g27wclJiQqvJh4bksVV2XOG6xPbe4xGohKFTaVwGQCPVlzhYJnRA8cC54STkxANPo0/K/msL2Q8ODThKd54pgNgEfnOSvyxaXPEpDPabvWKB+AFTjBprB2S4OHX5VWFTY1fXV8y84mTrsT306EK57dV4vGmUrhNVPjihzOFwnJrDxzzg5OTcBokv2VP93D609Pyz3UYKUDsSo9MurY38eTJ0rgqfAlc5pAyoxuW3LP/6exPW35tfvcxI1hjEzEUiQWtFVh2+i8JVTi0QwHHNGiEdA4r1tXX3Xd0GymCZgYcveWNgJ1vYNmpLQmDCdN3x/B4OG5zqz2lZOaButFNfXLQjMEliJjv3IrHm7bAHbbSmX0AGAMFg5fy+wc4+uxNH9Zfcnwye89LMx0CL2x5HUubX4u7wnpdeabBR7jjg6J1xY8OffKRWdxE4yPRIfAjLeX4Q3N5XODAESkYhR6JCmsb075XXlBbqyYLHJnpUIYLWsux9HR84GAU4JM5rrRfFIqnv390IJnYyO7BNIue4YUtZVjavDWuClOmQSX0cJfNvmL6wbrTlwM7ip5d7JKHecGyqKUMvzMJDuRW06BS7tQQL6684cOjhy8ndhT9sxKvvOirLZbfNm+Fx8RKp7cwRkjfgCCsbyWTyx48dEj5NsCBTJf+foPrsS8r7IaXZsYggPncHP+GmxfXTDv0T0N/NEzmC5HuWTcfBBFyjNxUX80Uyn98XrQsn/HBJyeMXHM5xpCDD8+55d6+Mw1uXuTHOzzrueUYg0pIq0LFld//+7H3LgfEzD0Dzs8fmr34B+6BCh+hVhZ27tf7LSO44Kb8S06f9c8z6+quiP9C+D8iWL1ehR5r6QAAAABJRU5ErkJggg=="
+                            alt="icon" data-v-87f45041> Google Play</a>
+                    <a href="#" class="btn btn-dark"
+                        style="font-family: Microsoft YaHei; font-weight: bold; font-size: 1.3rem; align-items: center; gap: 4rem; padding: 1rem; color: #ffffff;"><i
+                            class="bi bi-apple"></i><img class="download-icon apple"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAvCAYAAACPMrhmAAAAAXNSR0IArs4c6QAAA7ZJREFUWEfNmVnoVVUUxn8fRUGTTRQVlUkDQZoW+BBhKVkmRAWWkDSBEL1UFAlBvgRBJEU91lMlaSZGINnwUEYDNEdJ0UMjVDQgNBE2+MX35xw7995z/vf+773e43o9e+/1Y+29117rO2JCZvtUYC7wkqQ/+rlVvwGjfrd9JXAbcB6wHzBH0lf91t1rYLZnA48CSysQfwKzJf3YCpjt+cALwLFdAF8Cp0v6Z+Jgtk8C3geOqnG+QdKqflD5PvattL0NuLTB+SJJr00czPaFwCsNjrdLWjwI1NgjNk20fgHOlfT5xMFsHwF8DRza5XwXsErSlkGhxhox22cDH3Sd21+BmyQ9NROocYNdAGwvAHYDzwK3S0oUZ2wD30rbhwEHArskJRIdZjs56zLg+0RO0nflANuHAIcX2/w7sLPfszQtmO2zgOuAROMM4GAg79wOINf+GUnv1IXD9izgGmAZcD5wZGXcz8DHmQ+sl5TL0WG1YLaPBx4A8s4lSk2WDP4hsBF4FfgNWACsBC6quQh163wDrJX0RPVjD5jtRcAG4IQZH4zRJuSCrC63uAPM9hJgK3DQaD6Gnp1tzdH5/0myPQd4u+GNG9rTDCf+BSyR9MaeiNnOGck2tmW5xVdJenNPxGxfXJQpA6ePMdP/ACyW9Gm57hSI7ZfzYczOBl3O2SlJr3fcyiLfhHi6tDCok2HGPSbpxp48Zvvy4vkYZtFR5/wLzJP0SR3Yc8DyUT0MOf8jYL6kbGeHyfZ7wDlDLjzqtI2S8mz1WMDy+qdOb8Puk3RXE9hPwNFtUAF3S7q3CWwnkOqzDXtQ0h1NYJ+l12uDqpALLmkCezeNQktg2a2TJaV47LmVqYOubQksbm+Q9Hgd2C3Awy2C5SjNlfR3lSHp4kygJ/NOGHSdpDXdYPsDoU491pYl898s6ZESoKwuNgMr2qIq/KblS067J2pQCXY1sKllsNJ9arLrS7DU+NGujtlH4FZXS+uHgFv3AbDktBOrYOkHU2m0VV6XMXla0sru9i16QwrHtiwN9AJJO7rBktPSWR/QEtlUtOK7rhNv66xFqEm0vmgCixgSoeS0CUdtjaR1HQm2G8B2fhZES53UlkZXW1qV2RtvoO07gfsnELVvgYVVPa12K6sgtlOOTIkce8lyrpZHq+hev59wlyY4UUtp1GQR4SLivQVE6zquaG6i9eecNvnIb5sVTbr/QMnUdjrltcApBV1qp+eBJ4FtdRVoxtleCFxR9K3zCsiIey8COex5BmvtP4TGLt6LGrF+AAAAAElFTkSuQmCC"
+                            alt="icon" data-v-87f45041> App Store</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- image end -->
+
+    <!-- Card -->
+    <div class="kedua">
+        <br>
+        <div class="container-fluid">
+            <div class="container-dua">
+                <section id="new"><h1 style="font-family: Microsoft YaHei; font-size: 3rem; font-weight: bold; color: #ffffff;">NEWS</h1></section>
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="container-card">
+            <br />
+            <br />
+            <div class="book-jus">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-5 d-flex justify-content-center">
+                        <div class="col d-flex justify-content-center">
+                            <div class="card" style="width: 30rem; padding: 0.5rem; border-radius: 25px;">
+                                <img src="Image/card1.jpg" style="border-radius: 15px;" class="card-img-top" alt="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"
+                                        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                        Void Night</h5>
+                                    <h5 class="card-title"
+                                        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 1rem; color: #666666cb; position: absolute; bottom: 10px; right: 10px;">
+                                        2024/06/19</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex justify-content-center">
+                            <div class="card" style="width: 30rem; padding: 0.5rem; border-radius: 25px;">
+                                <img src="Image/card2.jpg" style="border-radius: 15px;" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title"
+                                        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                        How to become a developer</h5>
+                                    <h5 class="card-title"
+                                        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 1rem; color: #666666cb; position: absolute; bottom: 10px; right: 10px;">
+                                        2024/06/21</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex justify-content-center">
+                            <div class="card" style="width: 30rem; padding: 0.5rem; border-radius: 25px;">
+                                <img src="Image/card3.jpg" style="border-radius: 15px;" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title"
+                                        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                        [New feature] Entity system</h5>
+                                    <h5 class="card-title"
+                                        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 1rem; color: #666666cb; position: absolute; bottom: 10px; right: 10px;">
+                                        2024/05/24</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex justify-content-center">
+                            <div class="card" style="width: 30rem; padding: 0.5rem; border-radius: 25px;">
+                                <img src="Image/card4.jpg" style="border-radius: 15px;" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title"
+                                        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                        Colorful skies change with you - Mini Sky Box Tutorial</h5>
+                                    <h5 class="card-title"
+                                        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 1rem; color: #666666cb; position: absolute; bottom: 10px; right: 10px;">
+                                        2024/05/24</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex justify-content-center">
+                            <div>
+                                <img src="Image/dinoHijau.png" height="300px" alt="Dino Hijau">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <!-- Card end -->
+    </div>
+    <!-- end -->
+    <!-- Card2 -->
+    <div class="ketiga">
+        <br>
+        <div class="container-fluid">
+            <div class="container-dua">
+                <section id="featured"><h1 style="font-family: Microsoft YaHei; font-size: 3rem; font-weight: bold; color: #ffffff;">FEATURED
+                </h1></section>
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="container-card">
+            <br />
+            <br />
+            <div class="book-jus">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 d-flex justify-content-center">
+                        <div class="col d-flex justify-content-center">
+                            <div>
+                                <img src="Image/dinoPink.png" height="300px" alt="Dino Hijau">
+                            </div>
+                        </div>
+                        <div class="col d-flex justify-content-center">
+                            <div class="card" style="width: 30rem; padding: 0.5rem; border-radius: 25px;">
+                                <img src="Image/card5.jpeg" style="border-radius: 15px;" class="card-img-top"
+                                    alt="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"
+                                        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                        Mining gameplay</h5>
+                                    <h5 class="card-title"
+                                        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 1rem; color: #666666cb; position: absolute; bottom: 10px; right: 10px;">
+                                        2024/06/04</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex justify-content-center">
+                            <div class="card" style="width: 30rem; padding: 0.5rem; border-radius: 25px;">
+                                <img src="Image/card6.jpeg" style="border-radius: 15px;" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title"
+                                        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                        How to become a developer</h5>
+                                    <h5 class="card-title"
+                                        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 1rem; color: #666666cb; position: absolute; bottom: 10px; right: 10px;">
+                                        2024/05/31</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex justify-content-center">
+                            <div class="card" style="width: 30rem; padding: 0.5rem; border-radius: 25px;">
+                                <img src="Image/card7.jpeg" style="border-radius: 15px;" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title"
+                                        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                        Dinosaur Version</h5>
+                                    <h5 class="card-title"
+                                        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 1rem; color: #666666cb; position: absolute; bottom: 10px; right: 10px;">
+                                        2023/12/14</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <!-- Card end -->
+    </div>
+    <!-- end -->
+
+    <!-- Keempat -->
+    <div class="keempat" id="mob">
+        <div class="container-fluid">
+            <div class="container">
+                <br>
+                <br>
+                <div class="container-fluid">
+                    <div class="container-fluid">
+                        <div class="container-keempat">
+                            <div
+                                class="container-isi d-flex flex-column flex-md-row align-items-center justify-content-around">
+                                <div class="col-12 col-md-1 text-center text-md-start">
+                                    <img src="https://static.miniworldgame.com/nuxts-official-website/public/_nuxt/logo.0edc9054.png"
+                                        alt="logo" data-v-9e122ea3>
+                                </div>
+                                <div class="col-12 col-md-8 text-center text-md-start mt-3 mt-md-0">
+                                    <h1 class="card-title">Need to redownload?</h1>
+                                    <p class="card-text">Already own the game, but need the Launcher? Looking for the
+                                        Linux distribution or server files? Check out our Downloads page.</p>
+                                </div>
+                                <div
+                                    class="col-12 col-md-2 d-flex justify-content-center justify-content-md-end mt-3 mt-md-0">
+                                    <button type="button" class="btn btn-outline-light">Go To Downloads
+                                        <span>></span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="container-fluid">
+                    <div class="container">
+                        <div class="container-market d-flex flex-column flex-md-row">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <img src="Image/miniworld.jpg" alt="" width="100%">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <h1>Mobs Mini World CREATA</h1>
+                                    <p>Mobs in Mini World CREATA are characters that move and interact in the game
+                                        world. There
+                                        are different types of mobs that can be found in Mini World CREATA, and they are
+                                        grouped
+                                        based on their behavior, environment, as well as how they interact with the
+                                        player.</p>
+                                    <button type="button" class="btn btn-outline-light">click for more info</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+        <br>
+    </div>
+    <!-- ketiga end -->
+
+    <!-- Ke empat -->
+    <div class="kelima">
+        <div class="container-fluid">
+            <div class="container">
+                <br>
+                <br>
+                <div class="container-caro">
+                    <section id="gallery"><h1 class="text-center" id="galery"
+                        style="font-family: Microsoft YaHei; color: #ffffff; font-weight: bold;">GALERY
+                    </h1></section>
+                    <div id="carouselExampleCaptions" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="Image/car4.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h3 style="font-weight: bold;">Adventure</h3>
+                                    <p>Travel around the world with friends.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Image/car3.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h3 style="font-weight: bold;">Be a Character</h3>
+                                    <p>Choose your favorite character.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Image/car2.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h3 style="font-weight: bold;">Survive</h3>
+                                    <p>Make your survival strategy.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="container-fluid" id="support">
+                    <div class="container">
+                        <div class="container-support text-center">
+                            <h1 style="color: #ffffff; font-weight: bold;">Need Support?</h1>
+                            <p style="color: #ffffff;">If you've encountered an issue while playing our games, we'd be
+                                happy to help!</p>
+                            <button type="button" class="btn btn-outline-light">contact for support</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-support text-center">
+                    <hr>
+                    <form style="color: #ffffff;">
+                        <h1 style="color: #ffffff; font-weight: bold;">SIGN IN</h1>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text" style="color: rgb(255, 255, 255);">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <!-- empat end -->
+
+    <!-- footer -->
+    <footer>
+        <div>
+            <div class="footer-content">
+                <div style="font-weight: bold; font-size: 25px;">
+                    <img src="Image/logoMiniWorld.jpg" height="60px" style="border-radius: 8px;" alt=""> Mini World
+                    CREATA 2024
+                </div>
+
+                <div>
+                    <h2 style="font-weight: bold;">FOLLOW US</h2>
+                    <a href="#">
+                        <img src="Image/youtube.jpg" alt="" width="40px">
+                    </a>
+                    <a href="#">
+                        <img src="Image/discord.jpeg" alt="" width="40px">
+                    </a>
+                    <a href="#">
+                        <img src="Image/facebook.jpeg" alt="" width="40px">
+                    </a>
+                    <a href="#">
+                        <img src="Image/tiktok.png" alt="" width="40px">
+                    </a>
+                </div>
+                <div>
+                    <a href="#">Privacy & Terms</a><br>
+                    <a href="#">Terms of Use</a><br>
+                    <a href="#">cookie policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
