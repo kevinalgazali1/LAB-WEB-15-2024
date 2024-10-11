@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blackjack Kang</title>
+        <link rel="stylesheet" href="git.css">
+        <script src="git.js"></script>
+    </head>
+
+    <body>
+        <h2>Dealer: <span id="dealer-sum">??</span></h2>
+        <div id="dealer-cards">
+            <img id="hidden" src="./cards/BACK.png">
+        </div>
+
+        <h2>You: <span id="your-sum">0</span></h2>
+        <div id="your-cards"></div>
+
+        <br>
+        <input type="number" id="bet-amount" placeholder="Enter bet amount (min $100)" min="100">
+        <button id="bet">Place Bet</button>
+        <br>
+        <button id="hit" disabled>Hit</button>
+        <button id="stay" disabled>Stay</button>
+        <button id="play-again" style="display:none;">Play Again</button>
+        <p id="results"></p>
+
+        <p>Your Money: <span id="your-money">$5000</span></p>
+    </body>
+</html>
