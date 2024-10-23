@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 2</title>
+</head>
+
+<body>
+    <script>
+        function hitungHargaAkhir(hargaBarang, jenisBarang) {
+            let diskon = 0;
+
+
+            switch (jenisBarang.toLowerCase()) {
+                case 'elektronik':
+                    diskon = 0.10;
+                    break;
+                case 'pakaian':
+                    diskon = 0.20;
+                    break;
+                case 'makanan':
+                    diskon = 0.05;
+                    break;
+                default:
+                    diskon = 0;
+            }
+
+
+            let hargaSetelahDiskon = hargaBarang - (hargaBarang * diskon);
+
+
+            console.log(`Harga awal: Rp${hargaBarang}`);
+            console.log(`Diskon: ${(diskon * 100).toFixed(0)}%`);
+            console.log(`Harga setelah diskon: Rp${hargaSetelahDiskon.toFixed(0)}`);
+        }
+
+
+        const hargaBarang = parseFloat(prompt("Masukkan harga barang:"));
+        const jenisBarang = prompt("Masukkan jenis barang (Elektronik, Pakaian, Makanan, Lainnya)");
+
+
+        hitungHargaAkhir(hargaBarang, jenisBarang);
+
+    </script>
+</body>
+
+</html>
