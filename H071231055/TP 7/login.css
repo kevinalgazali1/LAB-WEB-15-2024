@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Harry P';
+    src: url('assets/HARRYP__.ttf') format('truetype');
+    font-weight: 1000;
+}
+@font-face {
+    font-family: 'Magic School';
+    src: url('assets/MagicSchoolOne.ttf') format('truetype');
+    font-weight: 1000;
+}
+@font-face {
+    font-family: 'Magik';
+    src: url('assets/CWMAGIK_.TTF') format('truetype');
+    font-weight: 1000;
+}
+
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    scrollbar-width: none;
+}
+
+h1{
+    font-family: 'Harry P';
+    font-size: 110px;
+    color: #FFF;
+    padding-top: 70px;
+    margin-bottom: -150px;
+}
+
+.container-fluid h1{
+    text-align: center;
+}
+.container-fluid img{
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.container-fluid h2{
+    font-family: 'Harry P';
+    text-align: center;
+    font-size: 35px;
+    color: #FFF;
+}
+.container-fluid a{
+    font-family: 'Magik';
+    text-align: center;
+    font-size: 20px;
+    color: #ffb210;
+}
+.container-fluid p{
+    font-family: 'Magik';
+    text-align: center;
+    font-size: 20px;
+    color: #FFF;
+}
+
+form label{
+    font-family: 'Magik';
+    font-size: 20px;
+    color: #FFF;
+}
+
+form button{
+    font-family: 'Magik';
+    font-size: 25px;
+    color: #4b3507;
+    border: 1px solid #4b3507;
+    background-color: #ffb210;
+    cursor: pointer;
+    border-radius: 30px;
+}
+form button:hover{
+    font-family: 'Magik';
+    font-size: 25px;
+    color: #ffb210;
+    border: 1px solid #4b3507;
+    background-color: #4b3507;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.btn {
+    font-size: 17px;
+    font-family: 'Egyptienne';
+    width: 200px;
+    border-radius: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: #9c3c08;
+    border: 1px solid #9c3c08;
+    color: white;
+}
+
+form input{
+    font-family: 'Magik';
+    font-size: 20px;
+    border-radius: 30px;
+    height: 38px;
+}
