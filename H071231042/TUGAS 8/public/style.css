@@ -1,0 +1,55 @@
+/* public/css/style.css */
+/* public/css/style.css */
+body {
+    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Fvectors%2Fblue-background-computer%2F2&psig=AOvVaw3U0iAbm-Vmefht1iZLEs0c&ust=1731068802852000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOiQsP2byokDFQAAAAAdAAAAABAJ');
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 30px;
+    text-align:center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 25px;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 150px;
+
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #007BFF;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color:red;
+}
